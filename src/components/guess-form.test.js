@@ -7,4 +7,8 @@ describe('<GuessForm />', () => {
 	it('Renders without crashing', () => {
 		shallow(<GuessForm />);
 	})
+
+	it('Submits guess on click', () => {
+
+	})
 })

@@ -7,4 +7,5 @@ describe('<Game />', () => {
 	it('Renders without crashing', () => {
 		shallow(<Game />);
 	});
+	// 
 })
