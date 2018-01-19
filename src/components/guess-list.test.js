@@ -9,4 +9,13 @@ describe('<GuessList />', () => {
 		shallow(<GuessList guesses={guesses}/>);
 	});
 	
+	it('Renders list of guesses', () => {
+		const values = [2, 56, 78, 45];
+		const wrapper = shallow(<GuessList guesses={values} />);
+		const items = wrapper.find('li');
+		expect(items.length).toEqual(values.length);
+		values.forEach((value, index) => {
+			expect(items.at(index).text()).toEqual(value.toString());
+		});
+	});
 })
