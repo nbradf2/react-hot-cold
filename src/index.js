@@ -10,7 +10,7 @@ import Game from './components/game';
 
 ReactDOM.render(
 	<Provider store={store}>
-  		<Game />,
+  		<Game />
   	</Provider>,
   	document.getElementById('root')
 );
