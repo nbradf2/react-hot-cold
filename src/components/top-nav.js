@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 
 import './top-nav.css';
 
-export default function TopNav(props) {
+export function TopNav(props) {
   return (
     <nav>
       <ul className="clearfix">
@@ -41,3 +41,5 @@ export default function TopNav(props) {
     </nav>
   );
 }
+
+export default connect()(TopNav)
