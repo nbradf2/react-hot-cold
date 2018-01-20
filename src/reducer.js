@@ -34,7 +34,18 @@ export default (state = initialState, action) => {
 			feedback = "You're Ice Cold...";
 		} else if (difference >= 30) {
 			feedback = "You're Cold...";
+		} else if (difference >= 10) {
+			feedback = "You're Warm.";
+		} else if (difference >= 1) {
+			feedback = "You're Hot!";
+		} else {
+			feedback = 'You got it!';
 		}
+
+		return Object.assign({}, state, {
+			feedback,
+			guesses: [...state.guesses, guess]
+		});
 	}
 
 	return state;
